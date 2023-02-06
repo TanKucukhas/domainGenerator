@@ -1,5 +1,6 @@
 import os
 
+
 def find_first_txt_file(folder):
     for root, dirs, files in os.walk(folder):
         for file in files:
@@ -7,7 +8,8 @@ def find_first_txt_file(folder):
                 return os.path.join(root, file)
     return None
 
-file_path = find_first_txt_file('./input')
+
+file_path = find_first_txt_file("./input")
 
 if file_path:
     print("The first txt file found:", file_path)
